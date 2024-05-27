@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Work</title>
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .profiles {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            filter: brightness(0.8) saturate(1.2); /* Adjust brightness and saturation for colorfulness */
+        }
+
+        .profile p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .profile:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .manage-profiles {
+            margin-top: 20px;
+            background-color: #4CAF50; /* Change button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Add transition effect */
+        }
+
+        .manage-profiles:hover {
+            background-color: #45a049; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Work</h1>
+        <div class="profiles">
+            <div class="profile">
+                <img src="https://via.placeholder.com/100x100/FF5733/FFFFFF?text=Presentation" alt="AI for Presentation">
+                <p>AI for Presentation</p>
+            </div>
+            <div class="profile">
+                <img src="https://via.placeholder.com/100x100/FFBD33/FFFFFF?text=Language" alt="AI for Language">
+                <p>AI for Language</p>
+            </div>
+            <div class="profile">
+                <img src="https://via.placeholder.com/100x100/3369FF/FFFFFF?text=Generating%20Prompt" alt="AI for Generating Prompt">
+                <p>AI for Generating Prompt</p>
+            </div>
+            <div class="profile">
+                <img src="https://via.placeholder.com/100x100/FF3333/FFFFFF?text=Social%20Media" alt="AI for Social Media">
+                <p>AI for Social Media</p>
+            </div>
+            <div class="profile">
+                <img src="https://via.placeholder.com/100x100/33FF57/FFFFFF?text=Finance" alt="AI for Finance">
+                <p>AI for Finance</p>
+            </div>
+        </div>
+        <button class="manage-profiles">Manage Profiles</button>
+    </div>
+</body>
+</html>
