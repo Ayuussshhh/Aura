@@ -4,8 +4,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to right, #f8b195, #c06c84, #355c7d);
-    font-family: Arial, sans-serif;
+    background: #2c3e50; /* Dark background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
 }
 
 .login-container {
@@ -16,27 +17,27 @@ body {
 }
 
 .login-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.85); /* Bright color for the login box */
+    padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 300px;
+    width: 320px;
+    color: #333; /* Dark text color inside the box */
 }
 
 .user-icon {
-    background-color: #2d3e50;
-    padding: 15px;
+    background-color: #3498db;
+    padding: 20px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #2d3e50;
+    border-bottom: 2px solid #3498db;
 }
 
 .input-group label {
@@ -46,19 +47,21 @@ body {
 .input-group svg {
     width: 20px;
     height: 20px;
+    fill: #3498db;
 }
 
 .input-group input {
     border: none;
     background: none;
-    color: white;
+    color: #333;
     outline: none;
     flex: 1;
     font-size: 1em;
+    padding: 10px;
 }
 
 .input-group input::placeholder {
-    color: #bbb;
+    color: #777;
 }
 
 .options {
@@ -66,7 +69,7 @@ body {
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: 0.9em;
-    color: #bbb;
+    color: #777;
 }
 
 .options label {
@@ -79,15 +82,23 @@ body {
 }
 
 button {
-    background-color: #2d3e50;
+    background-color: #3498db;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #1a2a3b;
+    background-color: #2980b9;
+    box-shadow: 0 0 20px rgba(41, 128, 185, 0.8); /* Enhanced glow effect */
+}
+
+button:active {
+    background-color: #3498db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
