@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Your Work</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #141414;
-            color: white;
-            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
 
         .container {
             text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            position: relative;
         }
 
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-size: 36px;
+            color: #555;
         }
 
         .profiles {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
         }
 
         .profile {
@@ -36,67 +46,105 @@
             flex-direction: column;
             align-items: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            width: 150px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .profile img {
-            border-radius: 10px;
+            border-radius: 50%;
             width: 100px;
             height: 100px;
-            filter: brightness(0.8) saturate(1.2); /* Adjust brightness and saturation for colorfulness */
+            margin-top: -50px;
+            background-color: #fff;
+            padding: 15px;
+            border: 5px solid #fff;
+            transition: transform 0.3s;
         }
 
         .profile p {
-            margin-top: 10px;
+            margin-top: 20px;
             font-size: 18px;
         }
 
+        .profile:hover img {
+            transform: scale(1.2);
+        }
+
         .profile:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .manage-profiles {
-            margin-top: 20px;
-            background-color: #4CAF50; /* Change button color */
-            color: white;
+        .exit-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff6363;
+            color: #fff;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
             cursor: pointer;
-            transition: background-color 0.3s; /* Add transition effect */
+            transition: background-color 0.3s;
         }
 
-        .manage-profiles:hover {
-            background-color: #45a049; /* Darker color on hover */
+        .exit-button:hover {
+            background-color: #ff4747;
+        }
+
+        @media (max-width: 600px) {
+            .profile {
+                width: 120px;
+            }
+            .profile img {
+                width: 80px;
+                height: 80px;
+                margin-top: -40px;
+                padding: 10px;
+                border: 3px solid #fff;
+            }
+            .profile p {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <button class="exit-button"><i class="fas fa-times"></i></button>
         <h1>Select Your Work</h1>
         <div class="profiles">
             <div class="profile">
-                <img src="https://via.placeholder.com/100x100/FF5733/FFFFFF?text=Presentation" alt="AI for Presentation">
-                <p>AI for Presentation</p>
+                <img src="https://img.icons8.com/cotton/100/000000/presentation.png" alt="Presentation">
+                <p>Presentation</p>
             </div>
             <div class="profile">
-                <img src="https://via.placeholder.com/100x100/FFBD33/FFFFFF?text=Language" alt="AI for Language">
-                <p>AI for Language</p>
+                <img src="https://img.icons8.com/cotton/100/000000/translator.png" alt="Language">
+                <p>Language</p>
             </div>
             <div class="profile">
-                <img src="https://via.placeholder.com/100x100/3369FF/FFFFFF?text=Generating%20Prompt" alt="AI for Generating Prompt">
-                <p>AI for Generating Prompt</p>
+                <img src="https://img.icons8.com/cotton/100/000000/idea-sharing.png" alt="Generating Prompt">
+                <p>Generating Prompt</p>
             </div>
             <div class="profile">
-                <img src="https://via.placeholder.com/100x100/FF3333/FFFFFF?text=Social%20Media" alt="AI for Social Media">
-                <p>AI for Social Media</p>
+                <img src="https://img.icons8.com/cotton/100/000000/social-media.png" alt="Social Media">
+                <p>Social Media</p>
             </div>
             <div class="profile">
-                <img src="https://via.placeholder.com/100x100/33FF57/FFFFFF?text=Finance" alt="AI for Finance">
-                <p>AI for Finance</p>
+                <img src="https://img.icons8.com/cotton/100/000000/financial--v1.png" alt="Finance">
+                <p>Finance</p>
             </div>
         </div>
-        <button class="manage-profiles">Manage Profiles</button>
     </div>
 </body>
 </html>
