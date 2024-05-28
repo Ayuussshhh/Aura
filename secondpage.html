@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #f4f4f4;
+            background-color: #f0f0f5;
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -31,7 +31,7 @@
         h1 {
             margin-bottom: 30px;
             font-size: 36px;
-            color: #555;
+            color: #333;
         }
 
         .profiles {
@@ -51,27 +51,30 @@
             overflow: hidden;
             position: relative;
             width: 150px;
-            background-color: #fff;
+            height: 200px;
+            background-color: #f9f9f9;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding-top: 60px;
         }
 
-        .profile img {
+        .profile i {
+            font-size: 60px;
+            color: #fff;
+            padding: 20px;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-top: -50px;
-            background-color: #fff;
-            padding: 15px;
-            border: 5px solid #fff;
+            background-color: #6c63ff;
             transition: transform 0.3s;
+            position: absolute;
+            top: 20px;
         }
 
         .profile p {
-            margin-top: 20px;
+            margin-top: 90px;
             font-size: 18px;
+            color: #555;
         }
 
-        .profile:hover img {
+        .profile:hover i {
             transform: scale(1.2);
         }
 
@@ -102,16 +105,17 @@
         @media (max-width: 600px) {
             .profile {
                 width: 120px;
+                height: 160px;
+                padding-top: 50px;
             }
-            .profile img {
-                width: 80px;
-                height: 80px;
-                margin-top: -40px;
+            .profile i {
+                font-size: 40px;
                 padding: 10px;
-                border: 3px solid #fff;
+                top: 10px;
             }
             .profile p {
                 font-size: 16px;
+                margin-top: 80px;
             }
             h1 {
                 font-size: 28px;
@@ -125,23 +129,23 @@
         <h1>Select Your Work</h1>
         <div class="profiles">
             <div class="profile">
-                <img src="https://img.icons8.com/cotton/100/000000/presentation.png" alt="Presentation">
+                <i class="fas fa-chalkboard-teacher" style="background-color: #4caf50;"></i>
                 <p>Presentation</p>
             </div>
             <div class="profile">
-                <img src="https://img.icons8.com/cotton/100/000000/translator.png" alt="Language">
+                <i class="fas fa-language" style="background-color: #2196f3;"></i>
                 <p>Language</p>
             </div>
             <div class="profile">
-                <img src="https://img.icons8.com/cotton/100/000000/idea-sharing.png" alt="Generating Prompt">
+                <i class="fas fa-lightbulb" style="background-color: #ffeb3b; color: #333;"></i>
                 <p>Generating Prompt</p>
             </div>
             <div class="profile">
-                <img src="https://img.icons8.com/cotton/100/000000/social-media.png" alt="Social Media">
+                <i class="fas fa-share-alt" style="background-color: #ff5722;"></i>
                 <p>Social Media</p>
             </div>
             <div class="profile">
-                <img src="https://img.icons8.com/cotton/100/000000/financial--v1.png" alt="Finance">
+                <i class="fas fa-dollar-sign" style="background-color: #9c27b0;"></i>
                 <p>Finance</p>
             </div>
         </div>
