@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools</title>
+    <style>
+        body {
+            background-color: #0e1621;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1f2b3a;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .dropbtn {
+            background-color: #1f2b3a;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 2px;
+            transition: background-color 0.3s;
+        }
+
+        .dropbtn:hover {
+            background-color: #3c4858;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            transition: width 0.3s;
+        }
+
+        .search-bar input:focus {
+            width: 400px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #3c4858;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .search-bar button:hover {
+            background-color: #1f2b3a;
+        }
+
+        .tool-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tool-item {
+            background-color: #1f2b3a;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .tool-number {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .tool-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .tool-details img {
+            width: 100px;
+            margin-right: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .tool-details img:hover {
+            transform: scale(1.1);
+        }
+
+        .tool-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-info h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .tool-info p {
+            margin: 10px 0;
+        }
+
+        .tool-info span {
+            color: #a3a3a3;
+        }
+
+        .tool-pricing {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin: 10px 0;
+        }
+
+        .pricing {
+            background-color: #28a745;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .price {
+            background-color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .visit-tool {
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .visit-tool:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .tool-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tool-details {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tool-details img {
+                margin-bottom: 10px;
+            }
+
+            .tool-pricing {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Misc. AI Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Art Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Text Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Resources</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Image Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI For Business</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Audio Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Automation Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Developer Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Video Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Productivity Tools</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <main>
+        <div class="tool-list">
+            <div class="tool-item">
+                <div class="tool-number">1</div>
+                <div class="tool-details">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT">
+                    <div class="tool-info">
+                        <h2>ChatGPT</h2>
+                        <p>ChatGPT is an AI language model developed by OpenAI that can generate human-like text based on the input it receives. It is used for a variety of applications, including customer support, content creation, and more.</p>
+                        <span>#AI Text Generation</span>
+                        <div class="tool-pricing">
+                            <span class="pricing">Freemium</span>
+                            <span class="price">Custom Pricing</span>
+                        </div>
+                        <a href="https://www.openai.com/chatgpt" class="visit-tool" target="_blank">Visit tool</a>
+                   
+html
+Copy code
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-item">
+            <div class="tool-number">2</div>
+            <div class="tool-details">
+                <img src="https://gamma.app/static/gamma_logo_icon_256x256.png" alt="Gamma AI">
+                <div class="tool-info">
+                    <h2>Gamma AI</h2>
+                    <p>Gamma AI provides advanced AI-driven solutions to enhance productivity and streamline business processes. It offers various tools for automation, data analysis, and more.</p>
+                    <span>#AI Productivity</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">Custom Pricing</span>
+                    </div>
+                    <a href="https://www.gamma.app" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-item">
+            <div class="tool-number">3</div>
+            <div class="tool-details">
+                <img src="https://static.grammarly.com/assets/files/1698022288/grammarly-icon.png" alt="Grammarly">
+                <div class="tool-info">
+                    <h2>Grammarly</h2>
+                    <p>Grammarly is a writing assistant that helps you write clear and effective content. It offers grammar, punctuation, and style suggestions to improve your writing.</p>
+                    <span>#AI Writing Assistant</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">from $11.66 / mo.</span>
+                    </div>
+                    <a href="https://www.grammarly.com" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tool-item">
+            <div class="tool-number">4</div>
+            <div class="tool-details">
+                <img src="https://static.prowritingaid.com/branding/pwa_icon_rgb.png" alt="ProWritingAid">
+                <div class="tool-info">
+                    <h2>ProWritingAid</h2>
+                    <p>ProWritingAid is a comprehensive writing assistant that offers grammar checking, style improvements, and in-depth reports to help you become a better writer.</p>
+                    <span>#AI Writing Assistant</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">from $20 / mo.</span>
+                    </div>
+                    <a href="https://www.prowritingaid.com" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
