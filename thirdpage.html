@@ -16,9 +16,6 @@
         header {
             background-color: #1f2b3a;
             padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         nav {
@@ -27,19 +24,20 @@
             flex-wrap: wrap;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
+        .dropbtn {
+            background-color: #1f2b3a;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 2px;
+            transition: background-color 0.3s;
         }
 
-        .logo img {
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        .logo h1 {
-            font-size: 24px;
+        .dropbtn:hover {
+            background-color: #3c4858;
         }
 
         .search-bar {
@@ -193,53 +191,51 @@
                 justify-content: space-between;
             }
         }
-
-        .login {
-            margin-right: 20px;
-        }
-
-        .login a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .login a:hover {
-            text-decoration: underline;
-        }
-
-        .about {
-            margin: 20px;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 28px;
-        }
-
-        .about p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="Logo">
-            <h1>AI Tools</h1>
-        </div>
-        <div class="login">
-            <a href="#login">Login</a>
-            <a href="#about">About Us</a>
-        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Misc. AI Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Art Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Text Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Resources</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Image Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI For Business</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Audio Generators</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Automation Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Developer Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Video Tools</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AI Productivity Tools</button>
+            </div>
+        </nav>
     </header>
 
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="text" placeholder="Search...">
         <button>Search</button>
     </div>
-
 
     <main>
         <div class="tool-list">
@@ -421,24 +417,5 @@
         </div>
     </div>
 </main>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toolItems = document.querySelectorAll('.tool-item');
-
-        // Add event listener for search input
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', function () {
-            const searchValue = this.value.toLowerCase();
-            toolItems.forEach(item => {
-                const toolName = item.querySelector('.tool-info h2').textContent.toLowerCase();
-                if (toolName.includes(searchValue)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
-</script>
 </body>
 </html>
