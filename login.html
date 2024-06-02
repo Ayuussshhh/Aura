@@ -5,96 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools Login</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #2C5364, #203A43, #0F2027);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
-        }
-
-        .background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #2C5364, #203A43, #0F2027);
-            animation: gradient 5s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: fadeOut 4s ease forwards;
-        }
-
-        .logo {
-            font-size: 30rem;
-            color: #3d6e8d;
-            text-transform: uppercase;
-            letter-spacing: 0.5rem;
-            animation: zoomIn 2s ease forwards, glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes zoomIn {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px #E50914, 0 0 20px #E50914, 0 0 30px #E50914, 0 0 40px #E50914, 0 0 50px #E50914, 0 0 60px #E50914, 0 0 70px #E50914;
-            }
-            100% {
-                text-shadow: 0 0 20px #E50914, 0 0 30px #E50914, 0 0 40px #E50914, 0 0 50px #E50914, 0 0 60px #E50914, 0 0 70px #E50914, 0 0 80px #E50914;
-            }
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+            overflow: hidden;
         }
 
         .login-container {
@@ -104,8 +24,6 @@
             width: 100%;
             position: relative;
             z-index: 1;
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards 4s;
         }
 
         .login-box {
@@ -324,11 +242,9 @@
                 transform: translateY(-700px) rotate(360deg);
             }
         }
-        
     </style>
 </head>
 <body>
-    <div class="background"></div>
     <ul class="background-bubbles">
         <li></li>
         <li></li>
@@ -338,9 +254,6 @@
         <li></li>
         <li></li>
     </ul>
-    <div class="overlay">
-        <div class="logo">AURA</div>
-    </div>
     <div class="login-container">
         <div class="login-box">
             <div class="user-icon">
@@ -359,24 +272,24 @@
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                     </label>
-                    <input type="email" id="email" placeholder="Email ID" required>
+                    <input type="email" id="email" placeholder="Email" required>
                 </div>
                 <div class="input-group">
                     <label for="password">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="20px" height="20px">
                             <path d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 17c1.1 0 1.99-.9 1.99-2L14 10c0-1.1-.89-2-1.99-2H8v4H6v-4H4v4H2V7c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H12z"/>
+                            <path d="M12 2C8.13 2 5 5.13 5 9v3H3v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V12h-2V9c0-3.87-3.13-7-7-7zm3 16h-6v-1c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v1zm3-7H6V9c0-3.31 2.69-6 6-6s6 2.69 6 6v2z"/>
                         </svg>
                     </label>
                     <input type="password" id="password" placeholder="Password" required>
                 </div>
                 <div class="options">
                     <label>
-                        <input type="checkbox"> Remember me
+                        <input type="checkbox" id="remember"> Remember me
                     </label>
-                    <a href="#">Forgot Password?</a>
+                    <a href="#" style="color: #4a4f56;">Forgot password?</a>
                 </div>
-                <button type="submit">LOGIN</button>
+                <button type="submit">Login</button>
             </form>
         </div>
     </div>
@@ -385,15 +298,10 @@
         function login() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            const error = document.getElementById('error');
 
-            if (email === "admin@example.com" && password === "password") {
-                error.style.display = "none";
-                alert("Login successful!");
-                // Redirect to the main page or dashboard
-            } else {
-                error.style.display = "block";
-            }
+            // Display an alert for successful login, regardless of credentials
+            alert("Login successful!");
+            window.location.href = "back.html";
         }
     </script>
 </body>
