@@ -16,6 +16,9 @@
         header {
             background-color: #1f2b3a;
             padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         nav {
@@ -24,20 +27,19 @@
             flex-wrap: wrap;
         }
 
-        .dropbtn {
-            background-color: #1f2b3a;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 2px;
-            transition: background-color 0.3s;
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
         }
 
-        .dropbtn:hover {
-            background-color: #3c4858;
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
         }
 
         .search-bar {
@@ -191,51 +193,94 @@
                 justify-content: space-between;
             }
         }
+
+        .login {
+            margin-right: 20px;
+        }
+
+        .login a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .login a:hover {
+            text-decoration: underline;
+        }
+
+        .about {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 28px;
+        }
+
+        .about p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: white;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        .icon {
+            width: 30px;
+            height: auto;
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="https://cdn.dribbble.com/users/947358/screenshots/3744885/media/d0b9c828d4c938425d0528885f6d5da7.png?resize=800x600&vertical=center" alt="AI Logo">
+            <h1>AI Tools</h1>
+        </div>
         <nav>
-            <div class="dropdown">
-                <button class="dropbtn">Misc. AI Tools</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Art Generators</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Text Generators</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Resources</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Image Generators</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI For Business</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Audio Generators</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Automation Tools</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Developer Tools</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Video Tools</button>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">AI Productivity Tools</button>
-            </div>
+               <a href="#subscription"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/7653/7653675.png" alt="Subscription"></a>
+                <a href="#library"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/7720/7720109.png" alt="Library"></a>
+                <a href="#favorites"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/3916/3916580.png" alt="Favorites"></a>
+                <a href="#updates"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/3917/3917240.png" alt="Updates"></a>
         </nav>
     </header>
 
     <div class="search-bar">
-        <input type="text" placeholder="Search...">
+        <input type="text" id="searchInput" placeholder="Search...">
         <button>Search</button>
     </div>
+
 
     <main>
         <div class="tool-list">
@@ -415,7 +460,358 @@
                 </div>
             </div>
         </div>
+        <div class="tool-item">
+            <div class="tool-number">11</div>
+            <div class="tool-details">
+                <img src="https://static.seekingalpha.com/assets/og_image_types/75/original_image.jpeg" alt="Seeking Alpha">
+                <div class="tool-info">
+                    <h2>Seeking Alpha</h2>
+                    <p>Seeking Alpha is a platform for investment research that utilizes AI algorithms to analyze market trends and provide actionable insights for investors.</p>
+                    <span>#AI Investment Research</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">Custom Pricing</span>
+                    </div>
+                    <a href="#" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">12</div>
+            <div class="tool-details">
+                <img src="https://cloud.google.com/images/ai/google-cloud-ai.png" alt="Google Cloud AI">
+                <div class="tool-info">
+                    <h2>Google Cloud AI</h2>
+                    <p>Google Cloud AI offers a wide range of AI services and solutions, including natural language processing, computer vision, and machine learning APIs, empowering businesses to build AI-driven applications.</p>
+                    <span>#AI Solutions Platform</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Pay as you go</span>
+                        <span class="price">Custom Pricing</span>
+                    </div>
+                    <a href="https://cloud.google.com/products/ai" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="tool-item">
+            <div class="tool-number">13</div>
+            <div class="tool-details">
+                <img src="https://d2p4vo7rjekhrg.cloudfront.net/ai/images/ai-integrations-graphic.jpg" alt="AI Dungeon">
+                <div class="tool-info">
+                    <h2>AI Dungeon</h2>
+                    <p>AI Dungeon is an AI-generated text adventure game where players can explore limitless adventures generated by a powerful AI model.</p>
+                    <span>#AI Gaming</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">Custom Pricing</span>
+                    </div>
+                    <a href="https://play.aidungeon.io/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">14</div>
+            <div class="tool-details">
+                <img src="https://deepai.org/static/images/logo-new-lg.png" alt="DeepAI">
+                <div class="tool-info">
+                    <h2>DeepAI</h2>
+                    <p>DeepAI provides a suite of AI models and tools for various applications, including image recognition, language processing, and more.</p>
+                    <span>#AI Model Repository</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">Custom Pricing</span>
+                    </div>
+                    <a href="https://deepai.org/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">15</div>
+            <div class="tool-details">
+                <img src="https://www.inference.org.uk/sentience/icon.gif" alt="Sentience">
+                <div class="tool-info">
+                    <h2>Sentience</h2>
+                    <p>Sentience is an AI platform that offers predictive analytics and personalized recommendations for businesses based on data analysis and machine learning algorithms.</p>
+                    <span>#AI Predictive Analytics</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Freemium</span>
+                        <span class="price">Custom Pricing</span>
+                    </div>
+                    <a href="#" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="tool-item">
+            <div class="tool-number">16</div>
+            <div class="tool-details">
+                <img src="https://avatars.githubusercontent.com/u/56712316?s=200&v=4" alt="AllenNLP">
+                <div class="tool-info">
+                    <h2>AllenNLP</h2>
+                    <p>AllenNLP is an open-source natural language processing library built on top of PyTorch. It provides pre-trained models and tools for various NLP tasks.</p>
+                    <span>#NLP Framework</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://allennlp.org/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">17</div>
+            <div class="tool-details">
+                <img src="https://blog.roboflow.com/content/images/2021/01/logo-tensorflow-js.jpeg" alt="TensorFlow.js">
+                <div class="tool-info">
+                    <h2>TensorFlow.js</h2>
+                    <p>TensorFlow.js is a JavaScript library for training and deploying machine learning models in the browser and on Node.js. It enables developers to build AI-powered web applications.</p>
+                    <span>#ML in JavaScript</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://www.tensorflow.org/js" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">18</div>
+            <div class="tool-details">
+                <img src="https://avatars.githubusercontent.com/u/11897134?s=200&v=4" alt="spaCy">
+                <div class="tool-info">
+                    <h2>spaCy</h2>
+                    <p>spaCy is an open-source library for natural language processing in Python. It offers efficient NLP pipelines and pre-trained models for various tasks.</p>
+                    <span>#NLP Library</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://spacy.io/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">19</div>
+            <div class="tool-details">
+                <img src="https://avatars.githubusercontent.com/u/51241642?s=200&v=4" alt="Hugging Face">
+                <div class="tool-info">
+                    <h2>Hugging Face</h2>
+                    <p>Hugging Face provides state-of-the-art natural language processing models and tools. It offers pre-trained models, datasets, and model training services.</p>
+                    <span>#NLP Models</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://huggingface.co/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">20</div>
+            <div class="tool-details">
+                <img src="https://cdn-images-1.medium.com/max/1600/1*GZT4VPXTgIzKzN93Gfu9Cg.png" alt="PyTorch">
+                <div class="tool-info">
+                    <h2>PyTorch</h2>
+                    <p>PyTorch is an open-source machine learning framework developed by Facebook's AI Research lab. It provides a flexible and dynamic ecosystem for building and training deep learning models.</p>
+                    <span>#Deep Learning Framework</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://pytorch.org/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="tool-item">
+            <div class="tool-number">21</div>
+            <div class="tool-details">
+                <img src="https://image.flaticon.com/icons/png/512/888/888878.png" alt="IBM Watson">
+                <div class="tool-info">
+                    <h2>IBM Watson</h2>
+                    <p>IBM Watson is an AI platform that provides a wide range of services, including natural language processing, image recognition, and machine learning. It enables businesses to build AI-powered applications.</p>
+                    <span>#AI Platform</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Custom Pricing</span>
+                    </div>
+                    <a href="https://www.ibm.com/watson" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">22</div>
+            <div class="tool-details">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Microsoft_Azure_Logo.svg/1280px-Microsoft_Azure_Logo.svg.png" alt="Azure Machine Learning">
+                <div class="tool-info">
+                    <h2>Azure Machine Learning</h2>
+                    <p>Azure Machine Learning is a cloud-based machine learning service provided by Microsoft Azure. It allows data scientists to build, train, and deploy machine learning models using scalable cloud resources.</p>
+                    <span>#Cloud-based ML Service</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Pay-as-you-go</span>
+                    </div>
+                    <a href="https://azure.microsoft.com/en-us/services/machine-learning/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">23</div>
+            <div class="tool-details">
+                <img src="https://i.ibb.co/qRYCxG0/logo.png" alt="DeepMind">
+                <div class="tool-info">
+                    <h2>DeepMind</h2>
+                    <p>DeepMind is an AI research lab acquired by Google. It focuses on developing algorithms for machine learning and artificial intelligence, with applications in healthcare, gaming, and more.</p>
+                    <span>#AI Research</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">N/A</span>
+                    </div>
+                    <a href="https://deepmind.com/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">24</div>
+            <div class="tool-details">
+                <img src="https://images.squarespace-cdn.com/content/v1/582670d20e4c11d55c29ed48/1610517069947-LQUL5QFACOAT4XO4HLW3/roam-research-logo.png" alt="Roam Research">
+                <div class="tool-info">
+                    <h2>Roam Research</h2>
+                    <p>Roam Research is a note-taking tool that uses AI to organize and connect your notes. It offers features such as bi-directional linking and natural language processing for efficient knowledge management.</p>
+                    <span>#AI Note-taking</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Subscription</span>
+                    </div>
+                    <a href="https://roamresearch.com/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">25</div>
+            <div class="tool-details">
+                <img src="https://avatars.githubusercontent.com/u/53057169?s=200&v=4" alt="fast.ai">
+                <div class="tool-info">
+                    <h2>fast.ai</h2>
+                    <p>fast.ai is a deep learning library that simplifies the process of training and deploying deep learning models. It provides high-level abstractions and pre-trained models for various tasks.</p>
+                    <span>#Deep Learning Library</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://www.fast.ai/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="tool-item">
+            <div class="tool-number">26</div>
+            <div class="tool-details">
+                <img src="https://miro.medium.com/max/700/1*0BhvmDv6pyLB2JGnO1E8jQ.png" alt="PyTorch">
+                <div class="tool-info">
+                    <h2>PyTorch</h2>
+                    <p>PyTorch is an open-source machine learning framework developed by Facebook's AI Research lab. It provides a flexible and dynamic environment for building and training deep learning models.</p>
+                    <span>#Deep Learning Framework</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://pytorch.org/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">27</div>
+            <div class="tool-details">
+                <img src="https://miro.medium.com/max/1400/1*YvqXNN74zVaE-oIlxDcr8Q.jpeg" alt="Keras">
+                <div class="tool-info">
+                    <h2>Keras</h2>
+                    <p>Keras is a high-level neural networks API written in Python. It is designed for fast experimentation and prototyping of deep learning models, with support for convolutional, recurrent, and dense networks.</p>
+                    <span>#Neural Networks API</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://keras.io/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">28</div>
+            <div class="tool-details">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Microsoft_Research_logo.svg/1280px-Microsoft_Research_logo.svg.png" alt="Microsoft Cognitive Toolkit (CNTK)">
+                <div class="tool-info">
+                    <h2>Microsoft Cognitive Toolkit (CNTK)</h2>
+                    <p>Microsoft Cognitive Toolkit (CNTK) is an open-source deep-learning toolkit developed by Microsoft. It supports training and deploying deep neural networks for speech, image, and text processing.</p>
+                    <span>#Deep Learning Toolkit</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://www.microsoft.com/en-us/research/project/cognitive-toolkit/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">29</div>
+            <div class="tool-details">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="scikit-learn">
+                <div class="tool-info">
+                    <h2>scikit-learn</h2>
+                    <p>scikit-learn is a machine learning library for Python. It provides simple and efficient tools for data mining and data analysis, with support for various supervised and unsupervised learning algorithms.</p>
+                    <span>#Machine Learning Library</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://scikit-learn.org/stable/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-item">
+            <div class="tool-number">30</div>
+            <div class="tool-details">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Anaconda_Logo.png/1200px-Anaconda_Logo.png" alt="Anaconda">
+                <div class="tool-info">
+                    <h2>Anaconda</h2>
+                    <p>Anaconda is a distribution of Python and R programming languages for scientific computing, including data science, machine learning, and artificial intelligence. It provides a comprehensive package management system.</p>
+                    <span>#Data Science Platform</span>
+                    <div class="tool-pricing">
+                        <span class="pricing">Open Source</span>
+                        <span class="price">Free</span>
+                    </div>
+                    <a href="https://www.anaconda.com/" class="visit-tool" target="_blank">Visit tool</a>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toolItems = document.querySelectorAll('.tool-item');
+
+        // Add event listener for search input
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+            toolItems.forEach(item => {
+                const toolName = item.querySelector('.tool-info h2').textContent.toLowerCase();
+                if (toolName.includes(searchValue)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
